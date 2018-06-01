@@ -1,5 +1,5 @@
 # Netflix Clone
-**[Demo](https://elastic-ptolemy-2eed66.netlify.com)**
+**[Demo](https://amazing-raman-277823.netlify.com/)**
 
 ![alt text](https://github.com/Ines86/netflixClone/blob/master/public/images/screenshot.jpg "screenshot")
 
