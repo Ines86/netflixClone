@@ -1,0 +1,165 @@
+@function black($opacity) {
+  @return rgba(black, $opacity);
+}
+
+//SearchBar
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-size: 1.4rem;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type="search"] {
+  padding: 8px 10px 8px 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 200px;
+  background-color: transparent;
+  border: 1px solid $grey-nav;
+  color: $grey;
+  margin-right: 10px;
+}
+
+input[type="search"]:focus {
+  border: 1px solid $grey;
+}
+
+input:-moz-placeholder {
+  color: #999;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+}
+
+// Navigation - UserProfile
+#userProfile {
+  width: 52px;
+  text-align: left;
+
+  .fa-sort-desc {
+    padding-left: 10px;
+    position: absolute;
+    top: 10%;
+  }
+
+  #userProfile-submenu {
+    display: none;
+    color: $grey;
+    position: absolute;
+    width: 162px;
+    box-sizing: border-box;
+    border: 1px solid rgba(grey, 0.3);
+    top: 70px;
+    right: 50px;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: black(0.8);
+
+    a:active,
+    a:hover {
+      color: $dark-red;
+    }
+
+    li {
+      margin: 0 0 10px 0;
+      padding: 5px 10px 0 10px;
+    }
+
+    li:first-child {
+      padding: 15px 10px 0 10px;
+    }
+
+    li:last-child {
+      padding-bottom: 6px;
+    }
+
+    img {
+      margin-right: 5px;
+    }
+
+    #account {
+      border-top: 1px solid rgba(grey, 0.3);
+      padding-top: 15px;
+      margin-top: 20px;
+    }
+
+    &:before {
+      font-family: FontAwesome;
+      content: "\F0DE";
+      font-size: 2rem;
+      position: absolute;
+      margin-top: -19px;
+      left: 50%;
+      padding: 0 50px;
+    }
+  }
+}
+
+#userProfile:hover #userProfile-submenu {
+  display: block;
+}
+
+//UserBar
+#userbar {
+  margin-left: auto;
+
+  img {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  a {
+    color: $white;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: $white;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin: 19px 24px 19px 0;
+    }
+
+    li:last-child {
+      margin: 19px 0;
+    }
+
+    form {
+      position: relative;
+    }
+
+    .fa-bell {
+      font-size: 2.5rem;
+    }
+
+    .fa-search {
+      position: relative;
+      left: 5px;
+      top: 0;
+      font-size: 2rem;
+    }
+
+    #kids {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+  }
+}

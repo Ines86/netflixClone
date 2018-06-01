@@ -1,0 +1,336 @@
+@function black($opacity) {
+  @return rgba(black, $opacity);
+}
+
+// General
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-align: center;
+  background-color: #141414;
+  -moz-osx-font-smoothing: grayscale; 
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+div, a {
+    -moz-osx-font-smoothing: grayscale; 
+    -webkit-font-smoothing: antialiased; 
+    -webkit-backface-visibility: hidden;
+    backface-visibility:hidden;
+}
+
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  outline: none;
+}
+
+header {
+  overflow: hidden;
+  background-color: black;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+#app {
+  background: #000;
+}
+
+// Content
+.content {
+  background: #141414;
+}
+
+//Links
+$a-tags: "a, a:active, a:hover, a:visited";
+$a-tags-hover: "a:active, a:hover";
+
+#{$a-tags} {
+  color: grey;
+  text-decoration: none;
+  outline: 0;
+}
+
+#{$a-tags-hover} {
+  color: $white;
+}
+
+//Img
+$slick-font-family: FontAwesome;
+$slick-prev-character: "\f051";
+$slick-next-character: "\f054";
+
+// Browse Navigation
+#navbar #browse {
+  display: none;
+}
+
+//Media Queries
+@media screen and (max-width: 1200px) {
+  #navbar nav {
+    display: none;
+  }
+
+  #navbar #browse {
+    display: flex !important;
+
+    #main-browse {
+      padding: 20px;
+      color: $dark-red;
+      font-weight: bold;
+    }
+
+    a:active,
+    a:hover {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+    }
+
+    .submenu {
+      display: none;
+      color: #dfdae0;
+      position: absolute;
+      width: 162px;
+      box-sizing: border-box;
+      border: 1px solid rgba(128, 128, 128, 0.3);
+      top: 70px;
+      left: 15%;
+      z-index: 5;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      font-size: 1.3rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.9);
+
+      &:before {
+        font-family: FontAwesome;
+        content: "\F0DE";
+        font-size: 2rem;
+        position: absolute;
+        margin-top: -19px;
+        right: 1%;
+        padding: 0 70px;
+      }
+
+      li:first-child {
+        padding: 15px 10px 0 10px;
+      }
+
+      li {
+        list-style-type: none;
+        margin: 10px;
+        padding: 5px 10px 0 10px;
+      }
+    }
+
+    &:hover .submenu {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #banner #overlay {
+    top: 15%;
+  }
+
+  footer {
+    padding: 70px 130px 20px 130px !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #overlay .title {
+    font-size: 7rem;
+  }
+
+  footer #technologies {
+    width: 90% !important;
+  }
+
+  #banner {
+    padding-bottom: 50px;
+  }
+
+  .modal-box .modal-body {
+    width: 60% !important;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  #overlay .description {
+    font-size: 1.3rem;
+  }
+
+  input[type="search"] {
+    width: 150px !important;
+  }
+
+  #navbar {
+    #logo {
+      display: none;
+    }
+
+    #browse {
+      padding-left: 0;
+
+      .submenu {
+        left: 5%;
+      }
+    }
+  }
+
+  .modal-box .modal-body {
+    width: 70% !important;
+  }
+
+  .modal-content img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #overlay {
+    .title {
+      font-size: 5rem;
+    }
+
+    .subtitle {
+      font-size: 2rem;
+    }
+  }
+
+  #banner {
+    padding-bottom: 30px;
+  }
+
+  footer {
+    padding: 70px 70px 20px 70px !important;
+  }
+
+  .modal-box {
+    .modal-body {
+      width: 80% !important;
+      font-size: 1.2rem !important;
+    }
+
+    .modal-header h2 {
+      font-size: 2rem !important;
+    }
+  }
+
+  .modal-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.99) 40%,
+      rgba(0, 0, 0, 0.5)
+    ) !important;
+  }
+
+  .modal-footer ul li {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #banner #overlay {
+    top: 15%;
+  }
+
+  #overlay {
+    .title {
+      font-size: 4rem;
+    }
+
+    .subtitle {
+      font-size: 1.7rem;
+    }
+
+    .btn {
+      padding: 10px 25px;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      width: 80%;
+    }
+  }
+
+  #navbar {
+    flex-direction: column-reverse;
+
+    #userbar {
+      margin-left: 0;
+    }
+
+    #browse .submenu {
+      top: 125px;
+      left: 35%;
+    }
+  }
+
+  footer {
+    padding: 40px 40px 20px 50px !important;
+
+    #technologies {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #banner {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  #banner {
+    padding-bottom: 90px;
+  }
+
+  .modal-footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #overlay {
+    .description {
+      width: 70%;
+    }
+
+    .title {
+      font-size: 3rem;
+    }
+  }
+
+  #banner {
+    padding-bottom: 140px;
+  }
+
+  input[type="search"] {
+    width: 80px !important;
+  }
+
+  footer #technologies {
+    flex-direction: column;
+  }
+}

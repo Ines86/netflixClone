@@ -1,0 +1,45 @@
+//Navigation
+#navbar {
+  display: flex;
+  align-items: center;
+
+  nav ul {
+    display: flex;
+
+    li {
+      list-style-type: none;
+      padding: 10px 20px 10px 0;
+
+      a {
+        color: $grey-nav;
+        font-size: 1.4rem;
+        transition: text-shadow 0.3s;
+        padding-bottom: 20px;
+      }
+
+      a:hover {
+        color: #fff;
+        border-bottom: 5px solid $dark-red;
+        padding-bottom: 20px;
+        text-shadow: 0 0 0.65px $white, 0 0 0.65px $white;
+      }
+
+      a.active {
+        color: #fff;
+        border-bottom: 5px solid $dark-red;
+        padding-bottom: 20px;
+        text-shadow: 0 0 0.65px $white, 0 0 0.65px $white;
+      }
+    }
+  }
+  // Logo
+  #logo {
+    float: left;
+
+    h1 {
+      color: $red;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

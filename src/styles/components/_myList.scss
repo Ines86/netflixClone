@@ -1,0 +1,21 @@
+// MyList Component
+.my-list {
+  position: relative;
+  width: 300px;
+  height: 169px;
+  margin-top: 35px;
+}
+
+.movieCarousel {
+  .results {
+    float: left;
+    margin: 0 25px 25px 0;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+  

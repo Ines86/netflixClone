@@ -1,0 +1,80 @@
+
+#banner {
+  position: relative;
+
+  #banner-bg {
+    background-size: cover;
+    width: 100%;
+    position: right;
+  }
+}
+
+#overlay {
+  position: absolute;
+  top: 25%;
+  width: 500px;
+  color: #fff;
+  text-align: left;
+
+  .title {
+    text-transform: uppercase;
+    font-size: 10rem;
+    font-weight: 200;
+    padding-bottom: 17px;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .subtitle {
+    font-size: 2.3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    #netflix {
+      font-weight: bold;
+    }
+
+    #original {
+      letter-spacing: 0.2rem;
+      padding-left: 15px;
+    }
+  }
+
+  .description {
+    line-height: 1.5;
+    margin-top: 18px;
+    letter-spacing: 0.1rem;
+  }
+
+  .play {
+    background-color: red;
+
+    &:hover {
+      background: black(0.8);
+    }
+  }
+
+  .list {
+    background-color: black(0.4);
+
+    &:hover {
+      background: black(0.8);
+    }
+  }
+
+  .btn {
+    color: #fff;
+    padding: 10px 35px;
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    .fa {
+      padding-right: 5px;
+    }
+  }
+}
